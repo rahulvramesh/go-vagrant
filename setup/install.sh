@@ -2,7 +2,6 @@
 # This is the entry point for configuring the system.
 #####################################################
 
-
 #install basic tools
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" install git
 
@@ -26,7 +25,5 @@ echo "export PATH=$PATH:/usr/local/go/bin" >> /home/vagrant/.bash_profile
 echo `export GOPATH=/home/vagrant/workspace:$PATH` >> /home/vagrant/.bash_profile
 
 export GOPATH=/home/vagrant/workspace
-
-#mkdir -p "$GOPATH/src" "$GOPATH/bin" 
 
 mkdir -p "$GOPATH/bin" 
