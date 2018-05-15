@@ -13,4 +13,8 @@ Vagrant.configure("2") do |config|
     #provision the box
     config.vm.provision :shell, :path => "setup/install.sh"
 
+    #port forwarding
+    config.vm.network "forwarded_port", guest: 8085, host: 8085,
+        auto_correct: true
+
 end
